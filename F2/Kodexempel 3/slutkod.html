@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Kodexempel</title>
+  </head>
+  <body>
+    <h1>Exempel med formulär</h1>
+
+    <form>
+        <fieldset>
+            <legend>Välj vad du vill!</legend>
+            <label for="silverfisk">Välj färg på din fisk</label>
+            <select id="silverfisk">
+                <option>Röd</option>
+                <option>Grön</option>
+                <option>Rosa</option>
+            </select>
+            <br>
+            <label for="guldfisk">Välj hur mycket pengar du vill ha </label>
+            <input max="1000" type="number" placeholder="Välj hur mycket pengar" id="guldfisk" required>
+            <input type="submit" value="Skicka formulär">
+            <button type="submit">Skciak</button>
+        </fieldset>
+
+    </form>
+
+  </body>
+</html>

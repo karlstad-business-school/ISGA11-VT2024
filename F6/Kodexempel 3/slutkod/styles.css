@@ -1,0 +1,12 @@
+body {
+  background-color: salmon;
+}
+
+main {
+	background-color: white;
+	padding: 12px;
+	max-width: 560px;
+	margin: 0 auto;
+	border-radius: 12px;
+	box-shadow: 4px 4px 4px rgba(0,0,0, 0.5);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Background Tester</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+          font-family: sans-serif;
+        }
+        .bg-image {
+          background-image: url('bakgrund.jpg');
+          width: 600px;
+          height: 600px;
+          border: 2px solid black;
+          background-repeat: no-repeat;
+        }
+        .example {
+          min-height: 100vh;
+        }
+        h2 {
+          margin-top: 3rem;
+        }
+        code {
+          color: dodgerblue;
+          font-size: 112.5%
+        }
+        i {
+          color: silver;
+        }
+      </style>
+</head>
+<body>
+    
+    <label for="repeatSelect" class="styleLabel">Background Repeat:</label>
+    <select id="repeatSelect" class="styleSelect">
+        <option value="no-repeat">No Repeat</option>
+        <option value="repeat">Repeat</option>
+        <option value="repeat-x">Repeat X</option>
+        <option value="repeat-y">Repeat Y</option>
+    </select>
+  
+    <label for="positionSelect" class="styleLabel">Background Position:</label>
+    <select id="positionSelect" class="styleSelect">
+      <option value="left top">Left Top</option>
+      <option value="center top">Center Top</option>
+      <option value="right top">Right Top</option>
+      <option value="left center">Left Center</option>
+      <option value="center center">Center Center</option>
+      <option value="right center">Right Center</option>
+      <option value="left bottom">Left Bottom</option>
+      <option value="center bottom">Center Bottom</option>
+      <option value="right bottom">Right Bottom</option>
+    </select>
+  
+    <label for="sizeSelect" class="styleLabel">Background Size:</label>
+    <select id="sizeSelect" class="styleSelect">
+      <option value="auto">Auto</option>
+      <option value="cover">Cover</option>
+      <option value="contain">Contain</option>
+    </select>
+  
+    <label for="attachmentSelect" class="styleLabel">Background Attachment:</label>
+    <select id="attachmentSelect" class="styleSelect">
+      <option value="scroll">Scroll</option>
+      <option value="fixed">Fixed</option>
+      <option value="local">Local</option>
+    </select>
+  
+ 
+
+    <h1>Bakgrundsbilder</h1>
+    <div class="example">
+      <h2><code id="code">background-repeat: repeat;</code><i> (standard)</i></h2>
+      <div class="bg-image" id="image"></div>
+    </div>
+ 
+
+  <script>
+    let repeat = document.getElementById("repeatSelect");
+    let position = document.getElementById("positionSelect");
+    let size = document.getElementById("sizeSelect");
+    let attachment = document.getElementById("attachmentSelect");
+
+    let code = document.getElementById("code");
+    let image = document.getElementById("image");
+
+    repeat.addEventListener("change", () => {
+        //code.textContent = repeat.
+        image.style.backgroundRepeat = repeat.value;
+    });
+
+    position.addEventListener("change", () => {
+        image.style.backgroundPosition = position.value;
+    });
+    
+    size.addEventListener("change", () => {
+        image.style.backgroundSize = size.value;
+    });
+
+    attachment.addEventListener("change", () => {
+        image.style.backgroundAttachment = attachment.value;
+    });
+
+    function changeBackground() {
+      var repeatSelect = document.getElementById("repeatSelect");
+      var positionSelect = document.getElementById("positionSelect");
+      var sizeSelect = document.getElementById("sizeSelect");
+      var attachmentSelect = document.getElementById("attachmentSelect");
+
+      var exampleDiv = document.getElementById("exampleDiv");
+
+      exampleDiv.style.backgroundRepeat = repeatSelect.value;
+      exampleDiv.style.backgroundPosition = positionSelect.value;
+      exampleDiv.style.backgroundSize = sizeSelect.value;
+      exampleDiv.style.backgroundAttachment = attachmentSelect.value;
+    }
+  </script>
+</body>
+</html>

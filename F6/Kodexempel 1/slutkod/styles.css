@@ -1,0 +1,32 @@
+table{
+    /*border: 1px solid black;
+    border-spacing: 100px;*/
+
+    width: 500px;
+    table-layout: fixed;
+
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 0.75rem;
+    text-align: right;
+}
+
+th:first-child{
+    text-align: left;
+}
+
+thead{
+    background-color: salmon;
+    border-bottom: 1px solid black;
+}
+
+tfoot{
+    border-top: 1px solid black;    
+}
+
+caption{
+    padding: 0.75rem;
+    border-bottom: 1px solid black;
+}

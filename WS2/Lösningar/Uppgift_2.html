@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsiv sida</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * { box-sizing: border-box; font-family: sans-serif;}
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                background-color: black;
+            }  
+
+            nav ul>li {
+                padding: 0.5rem;
+                padding-right: 1rem;
+            }
+
+            nav ul>li>a {
+                color:white;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .menu-item {
+                display: block;
+            }
+
+            #hidden-dropdown {
+                display: none;
+                position: relative;
+                padding-right: 20px;
+            }
+
+            ul.submenu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right:0;
+                width:200px;
+            }
+
+            @media (max-width: 480px) {
+                #hidden-dropdown {
+                    display: block;
+                }
+
+                .menu-item {
+                    display: none;
+                }
+
+                ul >li:hover>ul {
+                    display: block;
+                }
+
+            }
+
+
+            article.jumbotron {
+                margin: 0;
+                background-color: lightskyblue;
+                border: 1px solid gray;
+                border-radius: 3px;
+                padding: 20px;
+                text-align: center;
+            }
+
+        </style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li class="menu-item"><a href="#">Hem</a></li>
+				<li class="menu-item"><a href="#">Om oss</a></li>
+				<li class="menu-item"><a href="#">Våra tjänster</a></li>
+				<li id="hidden-dropdown">
+					<a href="#">&#x2630;</a>
+					<ul class="submenu">
+						<li><a href="#">Hem</a></li>
+						<li><a href="#">Om oss</a></li>
+						<li><a href="#">Våra tjänster</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<article class="jumbotron">
+				<h1>Stor jääätte rubrik</h1>
+				<p>En säljande text för ett väldigt viktigt budskap</p>
+			</article>
+		</main>
+	</body>
+</html>
